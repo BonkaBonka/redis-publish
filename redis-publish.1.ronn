@@ -1,0 +1,43 @@
+redis-publish(1) -- publish a message to a redis channel
+========================================================
+
+## SYNOPSIS
+
+ `redis-publish` [[options]] message
+
+## DESCRIPTION
+
+**redis-publish** is a simple CLI utility to publish a message to a redis
+channel.
+
+## OPTIONS
+
+  * `-c` <channel>, `--channel`=<channel>:
+    The channel to broadcast the message on.
+  * `-p` <port>, `--port`=<port>:
+    The redis server port number.
+  * `-s` <server>, `--server`=<server>:
+    The redis server hostname.
+  * `-h`, `--help`:
+    Usage help.
+
+## ENVIRONMENT
+
+  * `REDIS_CHANNEL`:
+    The redis channel to broadcast the message on.
+  * `REDIS_SERVER`:
+    The redis server hostname.
+  * `REDIS_PORT`:
+    The redis server port number.
+
+## EXIT CODES
+
+  0 - Success.
+
+  1 - Error while parsing CLI options.
+
+  2 - Error communicating to redis.
+
+## AUTHOR
+
+**James Cook** <bonkabonka@gmail.com>.
